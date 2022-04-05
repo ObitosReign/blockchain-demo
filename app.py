@@ -3,7 +3,6 @@ from uuid import uuid4
 from time import time
 import hashlib, json
 from flask_cors import CORS
-import time
 
 #FLASK APP
 app = Flask('__name__')
@@ -49,7 +48,6 @@ def register_node():
     chains.append({'chain': [], 'TX': [], 'id': node_id})
     #GENESIS BLOCK
     create_block([{'sender': 'Selena', 'receiver': node_id, 'amount': 1}], 100, 1, node_id, 0);
-    time.sleep(1)
     return jsonify(node_id), 200
 
 @app.route('/prev-block', methods=['POST'])
