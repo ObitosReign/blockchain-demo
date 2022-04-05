@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request, json
 from uuid import uuid4
 from time import time
 import hashlib, json
+from flask_cors import CORS
 
 #FLASK APP
 app = Flask('__name__')
